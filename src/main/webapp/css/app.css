@@ -1,0 +1,173 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.steps--nav {
+  list-style-type: none;
+}
+
+.steps--nav li {
+  display: flex;
+  position: relative;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps--nav li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #dddddd;
+  float: left;
+  position: absolute;
+  top: 19px;
+  right: -120px;
+}
+
+.steps--nav li span {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: #DDD;
+  border-radius: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+li.done span, li.done:after {
+  background: #2ecc71 !important;
+  color: #FFF;
+}
+
+.steps--nav li.active span {
+  background: #007bff;
+  color: #FFF;
+}
+
+.steps--nav li:last-child:after {
+  display: none;
+}
+
+.radioStyled {
+  position: relative;
+}
+
+.radioStyled input[type="radio"] {
+  display: flex;
+  -webkit-appearance: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  position: relative;
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+}
+
+.radioStyled input[type="radio"]:checked:before {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #007bff;
+  position: absolute;
+  border-radius: 50px;
+}
+
+a.profiles-choice {
+  height: 300px !important;
+}
+
+a.profiles-choice:hover {
+  box-shadow: 0 0.125rem 0.80rem rgba(0,0,0,.075)!important;
+}
+
+/* Dashboard */
+.sidebar-bar {
+  width: 300px;
+}
+
+main.content {
+  flex: 1;
+}
+
+.navbar-panel {
+  height: 56px;
+}
+
+.material-icons {
+  font-size: 21px;
+}
+
+.nav-pills .nav-link {
+  border-left: 4px solid transparent;
+}
+
+.nav-pills .nav-link.active {
+  background: #f8f9fa;
+  color: #9b30f9;
+  border-color: #9b30f9;
+  font-weight: 600;
+}
+
+.user-info .nav .material-icons {
+  font-size: 15px;
+}
+
+.user:hover {
+  background: #f8f9fa;
+}
+
+.user:hover .actions {
+  visibility: visible !important;
+}
+
+.sidebar-bar .nav-link {
+  padding: 12px;
+}
+
+.icon-big {
+  font-size: 50px;
+}
+
+.vhc-100 {
+  height: calc(100vh - 55px);
+}
+
+.number-square {
+  width: 30px;
+  height: 30px;
+}
+
+.form-control {
+  border-color: #efefef;
+  background-color: #efefef;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: #343a40;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: #9b30f9;
+  background: transparent;
+  color: #9b30f9;
+}
+
+/*alteraçoes reais 
+
+*/
+.row {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
