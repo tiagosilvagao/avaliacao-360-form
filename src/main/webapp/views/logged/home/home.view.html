@@ -1,3 +1,71 @@
-<div ui-view="" class="container-fluid">
-    <p>Hello Word!</p>
-</div> 
+<div class="row">
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Feedbacks</h5>
+                <a ui-sref="dashboard.feedbacks" class="d-flex text-decoration-none ml-3 align-items-center">Todos <i class="material-icons ml-2">trending_flat</i></a>
+            </div>
+
+            <div class="card-body">
+                <div class="d-flex flex-column">
+                    <div class="row mt-4">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-success"><i class="material-icons text-success mr-3">thumb_up</i> {{ state.feedbacks.positivo }}</span>
+                                        <small class="text-muted">Favorável</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-danger"><i class="material-icons text-danger mr-3">eco</i> {{ state.feedbacks.melhoria }}</span>
+                                        <small class="text-muted">Melhoria</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-warning"><i class="material-icons text-warning mr-3">stars</i> {{ state.feedbacks.especial }}</span>
+                                        <small class="text-muted">Especial</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">{{ state.feedbacks.total }} Feedbacks enviado</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Avaliações</h5>
+                <a ui-sref="dashboard.avaliacoes" class="d-flex text-decoration-none ml-3 align-items-center">Todas <i class="material-icons ml-2">trending_flat</i></a>
+            </div>
+
+            <div class="card-body">
+                <div class="d-flex flex-column">
+                    <a ng-repeat="val in state.evaluations" class="user row p-3 text-decoration-none" href="">
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info">
+                                    <p class="d-block mb-0">{{ val.title }}</p>
+                                    <small class="text-muted">criado em {{ val.dataInicial }} até {{ val.dataFinal }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

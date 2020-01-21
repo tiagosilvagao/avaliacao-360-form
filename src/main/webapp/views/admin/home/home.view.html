@@ -1,165 +1,107 @@
-<aside></aside>
-
-<main class="content position-relative">
-  <nav class="navbar navbar-panel navbar-light bg-white border-bottom">
-    <button class="btn d-flex justify-content-center align-items-center text-decoration-none"><i class="material-icons">menu</i></button>
-  </nav>
-
-  <div class="content-wrapper pt-4 p-3 vhc-100 overflow-auto">
-    <div class="container-fluid">
-      <h1 class="card-title h3 mb-4 font-weight-bolder">Avaliações <button class="btn btn-success btn-sm d-inline-flex justify-content-center ml-3" data-toggle="modal" data-target="#exampleModal">Novo <i class="material-icons ml-2">add</i></button></h1>
-      <p class="lorem text-muted font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed molestias quo necessitatibus quod amet iure quasi.</p>
-
-      <div class="row mb-4">
-        <div class="col-lg-12">
-          <div class="card bg-white rounded shadow-sm">
-            <div class="card--header d-flex align-items-center border-bottom p-3">
-              <ul class="nav card-header-pills">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Ativos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Inativos</a>
-                </li>
-              </ul>
+<div class="row">
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Feedbacks</h5>
+                <a ui-sref="dashboard.feedbacks" class="d-flex text-decoration-none ml-3 align-items-center">Todos <i class="material-icons ml-2">trending_flat</i></a>
             </div>
 
             <div class="card-body">
-              <div class="d-flex flex-column">
-                
-                <div class="user row p-3">
-                  <div class="col-lg-6 mb-3">
-                    <div class="d-flex align-items-center">
-                      <div class="user-info">
-                        <p class="d-block mb-0">Avaliação de Pares</p>
-                        <small class="text-muted">criado em 16/12/2019 até 01/02/2020</small>
-                      </div>
+                <div class="d-flex flex-column">
+                    <div class="row mt-4">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-success"><i class="material-icons text-success mr-3">thumb_up</i> {{ state.feedbacks.positivo }}</span>
+                                        <small class="text-muted">Favorável</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-danger"><i class="material-icons text-danger mr-3">eco</i> {{ state.feedbacks.melhoria }}</span>
+                                        <small class="text-muted">Melhoria</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                            <div class="card bg-white rounded mb-4">
+                                <div class="d-flex p-4 align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="h4 text-warning"><i class="material-icons text-warning mr-3">stars</i> {{ state.feedbacks.especial }}</span>
+                                        <small class="text-muted">Especial</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="d-flex align-items-center">
-                      <div class="user-info text-center">
-                        <p class="d-block mb-0">15 de 20</p>
-                        <small class="text-muted">Respostas</small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 d-flex justify-content-end">
-                    <div class="actions d-flex invisible">
-                      <button class="btn d-flex btn-link btn-sm text-muted"><i class="material-icons">delete</i></button>
-                      <button class="btn d-flex btn-link btn-sm"><i class="material-icons">edit</i></button>
-                    </div>
-                  </div>
+                    <small class="text-muted">{{ state.feedbacks.total }} Feedbacks enviado</small>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Avaliações</h5>
+                <a ui-sref="dashboard.avaliacoes" class="d-flex text-decoration-none ml-3 align-items-center">Todas <i class="material-icons ml-2">trending_flat</i></a>
+            </div>
 
-                <div class="user row p-3">
-                  <div class="col-lg-6 mb-3">
-                    <div class="d-flex align-items-center">
-                      <div class="user-info">
-                        <p class="d-block mb-0">Avaliação de Pares</p>
-                        <small class="text-muted">criado em 16/12/2019 até 01/02/2020</small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="d-flex align-items-center">
-                      <div class="user-info text-center">
-                        <p class="d-block mb-0">15 de 20</p>
-                        <small class="text-muted">Respostas</small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 d-flex justify-content-end">
-                    <div class="actions d-flex invisible">
-                      <button class="btn d-flex btn-link btn-sm text-muted"><i class="material-icons">delete</i></button>
-                      <button class="btn d-flex btn-link btn-sm"><i class="material-icons">edit</i></button>
-                    </div>
-                  </div>
+            <div class="card-body">
+                <div class="d-flex flex-column">
+                    <a ng-repeat="val in state.evaluations" class="user row p-3 text-decoration-none" href="">
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info">
+                                    <p class="d-block mb-0">{{ val.title }}</p>
+                                    <small class="text-muted">criado em {{ val.dataInicial }} até {{ val.dataFinal }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </div>
             </div>
-
-            <div class="d-flex justify-content-center justify-content-lg-end p-3">
-              <nav aria-label="Page navigation example">
-                <ul class="pagination mb-0">
-                  <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span> Anterior</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Próximo <span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</main>
+</div>
+<div class="row">
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Colaboradores</h5>
+                <a ui-sref="dashboard.users" class="d-flex text-decoration-none ml-3 align-items-center">Todos <i class="material-icons ml-2">trending_flat</i></a>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-column mb-2">
+                    <a ng-repeat="val in state.users" class="text-decoration-none user d-flex align-items-center p-3" ui-sref="dashboard.users.detail({ userId: val.id })">
+                        <img src="https://dummyimage.com/50x50" class="rounded-circle mr-3" alt="">
 
-<!-- Modals -->
-<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content border-0">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicionar uma Avaliação</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                        <div class="user-info">
+                            <p class="d-block mb-0">{{ val.name }}</p>
+                            <small class="text-muted">{{ val.time +', '+ val.funcao }}</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputEmail4"><small class="text-muted">Nome da Avaliação</small></label>
-                <input type="email" class="form-control" id="inputEmail4">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputPassword4"><small class="text-muted">Descrição</small></label>
-                <textarea class="form-control" cols="30" rows="6"></textarea>
-              </div>
-            </div>
-
-            <div class="form-group mb-4">
-              <label for="inputAddress"><small class="text-muted">Formulário</small></label>
-              <select id="inputState" class="form-control">
-                <option selected>Selecione o formulário...</option>
-                <option>Formulário 1</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="mb-0" for="inputAddress2">Cíclo de Avaliação</label>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputPassword4"><small class="text-muted">Data Inicial</small></label>
-                <input type="date" class="form-control" id="inputCity">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4"><small class="text-muted">Data Final</small></label>
-                <input type="date" class="form-control" id="inputCity">
-              </div>
-            </div>
-
-            <div class="form-group mb-4">
-              <label for="inputAddress"><small class="text-muted">Conjunto de Avaliados</small></label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Salvar</button>
-        </div>
-      </div>
     </div>
-  </div>
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm h-100">
+            <div class="card--header d-flex align-items-center p-3">
+                <h5 class="card-title mb-0 font-weight-bolder">Clima Organizacional</h5>
+                <a ui-sref="dashboard.organization" class="d-flex text-decoration-none ml-3 align-items-center">Gerenciar <i class="material-icons ml-2">trending_flat</i></a>
+            </div>
+
+            <div class="card-body">
+                <div>
+                    <canvas id="myChart" style="width: 100%; height: 285px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

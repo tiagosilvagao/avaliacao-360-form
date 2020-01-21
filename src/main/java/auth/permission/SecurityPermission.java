@@ -15,8 +15,8 @@ public class SecurityPermission implements Permission {
 
     // public
   	http.authorizeRequests().antMatchers("/api/cronapi/**").permitAll();
+  	http.authorizeRequests().antMatchers("/app/**").permitAll();
   	http.authorizeRequests().antMatchers("/auth/**").permitAll();
-  	http.authorizeRequests().antMatchers("/components/**").permitAll();
   	http.authorizeRequests().antMatchers("/css/**").permitAll();
   	http.authorizeRequests().antMatchers("/device/**").permitAll();
   	http.authorizeRequests().antMatchers("/favicon.ico").permitAll();
@@ -28,6 +28,8 @@ public class SecurityPermission implements Permission {
   	http.authorizeRequests().antMatchers("/plugins/**").permitAll();
   	http.authorizeRequests().antMatchers("/public/**").permitAll();
   	http.authorizeRequests().antMatchers("/signin/**").permitAll();
+  	http.authorizeRequests().antMatchers("/views/components/**").permitAll();
+  	http.authorizeRequests().antMatchers("/views/components/aside/aside.view.html").permitAll();
   	http.authorizeRequests().antMatchers("/views/error/**").permitAll();
   	http.authorizeRequests().antMatchers("/views/login.view.html").permitAll();
   	http.authorizeRequests().antMatchers("/views/public/**").permitAll();

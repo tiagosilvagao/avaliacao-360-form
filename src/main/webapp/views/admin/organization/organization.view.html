@@ -1,0 +1,149 @@
+<h1 class="card-title h3 mb-4 font-weight-bolder">Clima Organizacional <button class="btn btn-success btn-sm d-inline-flex justify-content-center mt-2 mt-md-0 mt-lg-0 ml-md-3" data-toggle="modal" data-target="#exampleModal">Novo Ciclo <i class="material-icons ml-2">add</i></button></h1>
+<p class="lorem text-muted font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed molestias quo necessitatibus quod amet iure quasi.</p>
+
+<div class="row mb-4">
+    <div class="col-lg-12">
+        <div class="card bg-white rounded border-0 shadow-sm">
+            
+            <div class="card--header d-flex align-items-center pt-3">
+                <ul class="nav nav-tabs pl-3 pr-3 w-100" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="active-tab" data-toggle="tab" href="#active" role="tab" aria-controls="active" aria-selected="true">Ativos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="inactive-tab" data-toggle="tab" href="#inactive" role="tab" aria-controls="inactive" aria-selected="false">Inativos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body">
+                <div class="d-flex flex-column">
+
+                    <a class="user row p-3 text-decoration-none" href="">
+                        <div class="col-lg-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info">
+                                    <p class="d-block mb-0">Avaliação</p>
+                                    <small class="text-muted">criado em 16/12/2019 até 01/02/2020</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info text-center">
+                                    <p class="d-block mb-0">15 de 20</p>
+                                    <small class="text-muted">Respostas</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 d-flex justify-content-end">
+                            <div class="actions d-flex invisible">
+                                <button class="btn d-flex btn-link btn-sm text-muted"><i class="material-icons">delete</i></button>
+                                <button class="btn d-flex btn-link btn-sm"><i class="material-icons">edit</i></button>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="user row p-3 text-decoration-none" href="">
+                        <div class="col-lg-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info">
+                                    <p class="d-block mb-0">Avaliação</p>
+                                    <small class="text-muted">criado em 16/12/2019 até 01/02/2020</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <div class="user-info text-center">
+                                    <p class="d-block mb-0">15 de 20</p>
+                                    <small class="text-muted">Respostas</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 d-flex justify-content-end">
+                            <div class="actions d-flex invisible">
+                                <button class="btn d-flex btn-link btn-sm text-muted"><i class="material-icons">delete</i></button>
+                                <button class="btn d-flex btn-link btn-sm"><i class="material-icons">edit</i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center justify-content-lg-end p-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                        <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span> Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Próximo <span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content border-0">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Adicionar uma Avaliação</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputEmail4"><small class="text-muted">Nome da Avaliação</small></label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputPassword4"><small class="text-muted">Descrição</small></label>
+            <textarea class="form-control" cols="30" rows="6"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group mb-4">
+          <label for="inputAddress"><small class="text-muted">Formulário</small></label>
+          <select id="inputState" class="form-control">
+            <option selected>Selecione o formulário...</option>
+            <option>Formulário 1</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="mb-0" for="inputAddress2">Cíclo de Avaliação</label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputPassword4"><small class="text-muted">Data Inicial</small></label>
+            <input type="date" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4"><small class="text-muted">Data Final</small></label>
+            <input type="date" class="form-control" id="inputCity">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-success">Salvar</button>
+    </div>
+  </div>
+</div>
+</div>

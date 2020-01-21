@@ -1,0 +1,172 @@
+<a ui-sref="dashboard.forms.lists" class="btn btn-link d-inline-flex mb-3 p-0 text-decoration-none"><i class="material-icons">keyboard_backspace</i> Voltar</a>
+<h1 class="card-title h3 mb-4 font-weight-bolder">Adicionar formulários</h1>
+<p class="lorem text-muted font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed molestias quo necessitatibus quod amet iure quasi.</p>
+
+<div class="row mb-4">
+    <div class="col-lg-4 mb-4">
+        <div class="card bg-white rounded border-0 shadow-sm">
+            <div class="card--header d-flex align-items-center justify-content-between p-3">
+                <div class="card-title h5 mb-0">Informações</div>
+            </div>
+
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4"><small class="text-muted">Título do modelo</small></label>
+                            <input type="email" class="form-control" id="inputEmail4" value="Clima Organizacional">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputPassword4"><small class="text-muted">Descrição do modelo</small></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="card bg-white rounded border-0 shadow-sm">
+            <div class="card--header d-flex align-items-center justify-content-between p-3">
+                <div class="card-title h5 mb-0">Questões</div>
+                <div class="dropdown">
+                    <button class="btn btn-success btn-sm d-inline-flex justify-content-center ml-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Adicionar <i class="material-icons ml-2">add</i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Multipla Escolha</a>
+                        <a class="dropdown-item" href="#">Campo Aberto</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="colaspse-item mb-3">
+                    <a class="btn btn-link text-left p-3 border d-block w-100 text-decoration-none rounded-0" data-toggle="collapse" href="#item1" role="button" aria-expanded="false" aria-controls="item1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="mb-0"><span class="number-square d-inline-flex justify-content-center align-items-center p-1 mr-2 mb-0 border rounded-circle">1</span> O que você acha do ambiente de trabalho?</p>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </div>
+                    </a>
+
+                    <div class="d-flex flex-column">
+                        <div class="collapse" id="item1">
+                            <div class="card rounded-0 border-top-0 card-body">
+                                <form action="">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail4"><small class="text-muted">Questão</small></label>
+                                            <input type="text" class="form-control" id="inputEmail4" value="O que você acha do ambiente de trabalho?">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label for="inputPassword4"><small class="text-muted">Descrição</small></label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4"><small class="text-muted">Competência avaliada</small></label>
+                                            <select class="form-control">
+                                                <option value="lideranca">Liderança</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center w-100 mb-3">
+                                            <span class="p-1 d-inline-flex justify-content-center align-items-center number-square mr-2 mb-0 border rounded-circle bg-secondary text-white">1</span>
+                                            <div class="d-flex w-100">
+                                                <input type="text" class="form-control" value="Sim">
+                                            </div>
+                                            <div class="d-flex ml-2" style="width: 80px">
+                                                <input type="number" class="form-control" min="0" value="0">
+                                            </div>
+                                            <button class="btn btn-link text-decoration-none text-danger d-flex justify-content-center"><i class="material-icons">delete</i></button>
+                                        </div>
+
+                                        <div class="d-flex align-items-center w-100 mb-3">
+                                            <span class="p-1 d-inline-flex justify-content-center align-items-center number-square mr-2 mb-0 border rounded-circle bg-secondary text-white">2</span>
+                                            <div class="d-flex w-100">
+                                                <input type="text" class="form-control" value="Mais ou menos">
+                                            </div>
+                                            <div class="d-flex ml-2" style="width: 80px">
+                                                <input type="number" class="form-control" min="0" value="0">
+                                            </div>
+                                            <button class="btn btn-link text-decoration-none text-danger d-flex justify-content-center"><i class="material-icons">delete</i></button>
+                                        </div>
+
+                                        <div class="d-flex align-items-center w-100 mb-3">
+                                            <span class="p-1 d-inline-flex justify-content-center align-items-center number-square mr-2 mb-0 border rounded-circle bg-secondary text-white">3</span>
+                                            <div class="d-flex w-100">
+                                                <input type="text" class="form-control" value="Não">
+                                            </div>
+                                            <div class="d-flex ml-2" style="width: 80px">
+                                                <input type="number" class="form-control" min="0" value="0">
+                                            </div>
+                                            <button class="btn btn-link text-decoration-none text-danger d-flex justify-content-center"><i class="material-icons">delete</i></button>
+                                        </div>
+
+                                        <div class="d-flex align-items-center w-100 mb-2">
+                                            <div class="d-flex w-100">
+                                                <input type="text" class="form-control" placeholder="Adicionar item">
+                                            </div>
+                                            <div class="d-flex ml-2" style="width: 80px">
+                                                <input type="number" class="form-control" min="0" value="0">
+                                            </div>
+                                            <button class="btn btn-link text-decoration-none d-flex justify-content-center text-secondary" title="Adicionar"><i class="material-icons">add</i></button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="colaspse-item mb-3">
+                    <a class="btn btn-link text-left p-3 border d-block w-100 text-decoration-none rounded-0" data-toggle="collapse" href="#item2" role="button" aria-expanded="false" aria-controls="item2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="mb-0"><span class="number-square d-inline-flex justify-content-center align-items-center p-1 mr-2 mb-0 border rounded-circle">2</span> O que você acha do modelo de gestão?</p>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </div>
+                    </a>
+
+                    <div class="d-flex flex-column">
+                        <div class="collapse" id="item2">
+                            <div class="card rounded-0 border-top-0 card-body">
+                                <form action="">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail4"><small class="text-muted">Questão</small></label>
+                                            <input type="text" class="form-control" id="inputEmail4" value="O que você acha do ambiente de trabalho?">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label for="inputPassword4"><small class="text-muted">Descrição</small></label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4"><small class="text-muted">Competência avaliada</small></label>
+                                            <select class="form-control">
+                                                <option value="grupo">Atividade em grupo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex flex-column">
+                                        <div class="form-group">
+                                            <label for="inputPassword4"><small class="text-muted">Campo aberto</small></label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer border-0 bg-white text-right">
+                <button class="btn btn-success btn-lg">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

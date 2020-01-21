@@ -1,5 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
 }
 
 .steps--nav {
@@ -89,7 +90,7 @@ a.profiles-choice:hover {
 }
 
 /* Dashboard */
-.sidebar-bar {
+.sidebar {
   width: 300px;
 }
 
@@ -128,7 +129,7 @@ main.content {
   visibility: visible !important;
 }
 
-.sidebar-bar .nav-link {
+.sidebar .nav-link {
   padding: 12px;
 }
 
@@ -163,11 +164,38 @@ main.content {
   color: #9b30f9;
 }
 
-/*alteraçoes reais 
+.icon-size--medium {
+  font-size: 40px
+}
 
-*/
-.row {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
+.icon-circle--medium {
+  width: 70px;
+  height: 70px;
+}
+
+.certificates:not(:last-child):after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 150px;
+  width: 2px;
+  background: #212529;
+  top: 5px;
+  left: 34px;
+}
+
+.certificates {
+  position: relative;
+}
+
+.certificates span {
+  z-index: 3;
+}
+
+.t-5 {
+  top: 5px;
+} 
+
+.r-5 {
+  right: 5px;
 }

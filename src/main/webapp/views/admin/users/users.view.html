@@ -1,0 +1,163 @@
+
+<h1 class="card-title h3 mb-4 font-weight-bolder">Colaboradores <button class="btn btn-success btn-sm d-inline-flex justify-content-center ml-3" data-toggle="modal" data-target="#exampleModal">Novo <i class="material-icons ml-2">add</i></button></h1>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card bg-white rounded border-0 shadow-sm mb-3">
+            <div class="card--header mb-3 d-flex align-items-center justify-content-between p-3">
+                <div class="card-title h5 mb-0">Times</div>
+            </div>
+        
+            <nav class="nav nav-pills flex-column mb-3">
+                <a class="nav-link rounded-0 active" href="#">Produto</a>
+                <a class="nav-link rounded-0" href="#">Fábrica</a>
+                <a class="nav-link rounded-0" href="#">Q.A</a>
+                <a class="nav-link rounded-0" href="#">Comercial</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card bg-white rounded border-0 shadow-sm">
+            <div class="card--header align-items-lg-center p-3 d-flex flex-column flex-lg-row justify-content-between">
+                <div class="d-flex align-items-center">
+                    <h5 class="card-title mb-3 mb-lg-0 mr-2">Time de Produto</h5>
+                </div>
+            
+                <div class="d-flex">
+                    <button class="btn btn-outline-primary d-flex justify-content-center"><i class="material-icons mr-2">filter_list</i> Filtro</button>
+            
+                    <div class="input-group ml-3">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary d-flex justify-content-center" type="button" id="button-addon2"><i class="material-icons">search</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card-body">
+                <div class="d-flex flex-column">
+                    <a class="user d-flex align-items-center justify-content-between text-decoration-none p-3" ui-sref="dashboard.users.detail({ userId: 3 })">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="https://dummyimage.com/50x50" class="rounded-circle mr-3" alt="">
+                
+                            <div class="user-info">
+                                <p class="d-block mb-0">Uellington Palma</p>
+                                <small class="text-muted">Front End</small>
+                                <ul class="d-inline-flex nav ml-3">
+                                    <li class="text-danger d-flex align-items-center mr-3" title="Feedback de Melhoria"><i class="material-icons mr-2">eco</i> 5</li>
+                                    <li class="text-success d-flex align-items-center mr-3" title="Feedback Favorável"><i class="material-icons mr-2">thumb_up</i> 10</li>
+                                    <li class="text-warning d-flex align-items-center" title="Feedback Especial"><i class="material-icons mr-2">stars</i> 10</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <div class="actions invisible">
+                            <button class="btn btn-link btn-sm text-muted"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-link btn-sm"><i class="material-icons">edit</i></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="card-footer bg-white d-flex justify-content-center justify-content-lg-end p-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                        <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span> Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Próximo <span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Adicionar Colaborador</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4"><small class="text-muted">Nome</small></label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4"><small class="text-muted">Sobrenome</small></label>
+            <input type="text" class="form-control" id="inputPassword4">
+          </div>
+          <div class="form-group col-md-10">
+            <label for="inputAddress"><small class="text-muted">E-mail</small></label>
+            <input type="text" class="form-control" id="inputAddress">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity"><small class="text-muted">Senha</small></label>
+            <input type="password" class="form-control" id="inputAddress">
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity"><small class="text-muted">Time</small></label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputState"><small class="text-muted">Função</small></label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+        </div>
+
+        <label><small class="text-muted">Lidera Pessoas?</small></label>
+        <div class="mb-3">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Sim</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked>
+            <label class="form-check-label" for="inlineRadio2">Não</label>
+          </div>
+        </div>
+
+        
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label for="inputState"><small class="text-muted">Liderado por</small></label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success">Adicionar</button>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,148 @@
+<h1 class="card-title h3 mb-4 text-dark font-weight-bolder">Feedbacks <button class="btn btn-success btn-sm d-inline-flex justify-content-center ml-3" data-toggle="modal" data-target="#exampleModal">Novo <i class="material-icons ml-2">add</i></button></h1>
+<p class="lorem text-muted font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed molestias quo necessitatibus quod amet iure quasi, voluptatibus laboriosam praesentium eum, a omnis exercitationem voluptates ad esse nobis. Commodi, nam.</p>
+
+<div class="conatainer">
+    <div class="row mt-4">
+        <div class="col-lg-3 col-6">
+            <div class="card bg-white rounded mb-4">
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <i class="material-icons icon-big text-muted mr-3">chat</i>
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="display-4 text-muted">{{ state.feedback.total }}</span>
+                        <small class="text-muted">Total</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="card bg-white rounded mb-4">
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <i class="material-icons icon-big text-success mr-3">thumb_up</i>
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="display-4 text-success">{{ state.feedback.positivo }}</span>
+                        <small class="text-muted">Favorável</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="card bg-white rounded mb-4">
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <i class="material-icons icon-big text-danger mr-3">eco</i>
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="display-4 text-danger">{{ state.feedback.melhoria }}</span>
+                        <small class="text-muted">Melhoria</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="card bg-white rounded mb-4">
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <i class="material-icons icon-big text-warning mr-3">stars</i>
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="display-4 text-warning">{{ state.feedback.especial }}</span>
+                        <small class="text-muted">Especial</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-end">
+                    <div class="dropdown mr-3">
+                        <button class="btn btn-outline-primary d-flex justify-content-center mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons mr-2">person</i> Todos Colaboradores
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right w-100" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Uellington Palma</a>
+                            <a class="dropdown-item" href="#">Tiago 7Orea</a>
+                            <a class="dropdown-item" href="#">Elder Guita</a>
+                            <a class="dropdown-item" href="#">Jecson Carvalho</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary d-flex justify-content-center mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons mr-2">filter_list</i> Todos os Feedbacks
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right w-100" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Todos os tipos</a>
+                            <a class="dropdown-item" href="#">Feedbacks Positivo</a>
+                            <a class="dropdown-item" href="#">Feedbacks de Melhoria</a>
+                            <a class="dropdown-item" href="#">Feedbacks Especial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-repeat="val in state.feedback.feedbacks" class="comment mb-3 d-flex align-items-center bg-white p-3 border-0 shadow-sm">
+                    <div class="comment-icon mr-3 d-flex p-3 border rounded-circle"><i class="material-icons" ng-class="getClass(val.tipo)">{{ geIcon(val.tipo) }}</i></div>
+
+                    <div class="comment-content">
+                        <div class="comment-info d-flex flex-column flex-lg-row mb-3">
+                            <h4 class="mb-0" ng-class="getClass(val.tipo)">Feedback {{ val.title }}</h4> <span class="mr-2 ml-2 d-none d-lg-block">•</span>
+                            <p class="mb-0 text-muted">{{ val.autor.name }} <small>avaliou</small> {{ val.recebido.name }}</p>
+                        </div>
+
+                        <p class="text-muted font-weight-normal">{{ val.text }}</p>
+                        <small class="text-muted">enviado {{ val.date }}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Enviar Feedback</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="d-flex justify-content-between mb-3">
+        <button type="button" class="d-flex bg-white border rounded p-3 justify-content-center align-items-center text-success">
+          <i class="material-icons mr-2">thumb_up</i>
+          <span>Favorável</span>
+        </button>
+        <button type="button" class="d-flex bg-white border rounded p-3 justify-content-center align-items-center text-warning">
+          <i class="material-icons mr-2">stars</i>
+          <span>Especial</span>
+        </button>
+        <button type="button" class="d-flex bg-white border rounded p-3 justify-content-center align-items-center text-danger">
+          <i class="material-icons mr-2">eco</i>
+          <span>Melhoria</span>
+        </button>
+      </div>
+
+      <hr>
+
+      <form action="">
+        <div class="form-group">
+          <label for="inputEmail4"><small class="text-muted">Para</small></label>
+          <select name="" class="form-control">
+            <option value="">Uellington</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4"><small class="text-muted">Assunto</small></label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword4"><small class="text-muted">Mensagem</small></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-success">Enviar</button>
+    </div>
+  </div>
+</div>
+</div>

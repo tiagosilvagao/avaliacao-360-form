@@ -1,0 +1,67 @@
+<aside class="sidebar d-none d-xl-flex flex-column bg-white shadow-sm vh-100" ng-controller="AsideController">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container d-flex flex-column justify-content-start">
+      <a class="navbar-brand text-white m-0" href="#">CronApp Culture</a>
+    </div>
+  </nav>
+
+  <div class="user d-flex align-items-center p-3 bg-light">
+    <img src="https://dummyimage.com/70x70" class="rounded-circle mr-3" alt="">
+
+    <div class="user-info text-light">
+      <h3 class="h5 mb-0 text-dark">{{ $ctrl.props.userName }}</h3>
+      <small class="text-muted">{{ $ctrl.props.cargo }}</small>
+    </div>
+  </div>
+
+
+  <ul class="nav nav-pills flex-column mt-3" ng-show="$ctrl.props.role == 1">
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.inicio" ui-sref-active="active"><i class="material-icons mr-2">home</i> Início</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.organization" ui-sref-active="active"><i class="material-icons mr-2">mood</i> Clima Organizacional</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.avaliacoes.list" ng-class="{active: $state.includes('dashboard.avaliacoes')}"><i class="material-icons mr-2">dvr</i> Avaliações</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.forms.lists" ng-class="{active: $state.includes('dashboard.forms')}"><i class="material-icons mr-2">edit</i> Formulários</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.users.times" ng-class="{active: $state.includes('dashboard.users')}"><i class="material-icons mr-2">people</i> Colaboradores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="dashboard.feedbacks" ui-sref-active="active"><i class="material-icons mr-2">chat</i> Feedbacks</a>
+    </li>
+  </ul>
+
+  <ul class="nav nav-pills flex-column mt-3" ng-show="$ctrl.props.role == 2">
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="home.inicio" ui-sref-active="active"><i class="material-icons mr-2">home</i> Início</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="home.avaliacoes" ui-sref-active="active"><i class="material-icons mr-2">dvr</i> Avaliações</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="home.users" ng-class="{active: $state.includes('home.users')}"><i class="material-icons mr-2">people</i> Colaboradores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-0 d-flex align-items-center" ui-sref="home.feedbacks" ui-sref-active="active"><i class="material-icons mr-2">chat</i> Feedbacks</a>
+    </li>
+  </ul>
+
+  <div class="sidebar-footer mt-auto pb-3">
+    <ul class="nav nav-pills flex-column mt-3">
+      <li class="nav-item" ng-show="$ctrl.props.role == 1">
+        <a class="nav-link d-flex align-items-center rounded-0" ui-sref="dashboard.settings.managers" ng-class="{active: $state.includes('dashboard.settings')}"><i class="material-icons mr-2">settings</i> Configurações</a>
+      </li>
+      <li class="nav-item" ng-show="$ctrl.props.role == 2">
+        <a class="nav-link d-flex align-items-center rounded-0" ui-sref="home.settings.dados" ng-class="{active: $state.includes('home.settings')}"><i class="material-icons mr-2">settings</i> Configurações</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex align-items-center rounded-0" href="#"><i class="material-icons mr-2">exit_to_app</i> Sair</a>
+      </li>
+    </ul>
+  </div>
+</aside>

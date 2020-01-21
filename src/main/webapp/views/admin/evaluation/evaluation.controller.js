@@ -1,17 +1,9 @@
 app.controller('EvaluationController', [
   '$scope',
-  '$http',
-  '$rootScope',
-  '$state',
-  '$translate',
-  '$filter',
-  '$sessionStorage',
-  '$timeout',
   EvaluationController,
 ]);
 
-function EvaluationController ($scope, $http, $rootScope, $state, $translate, $filter, $sessionStorage, $timeout) {
-  var ctrl = this;
-
+function EvaluationController ($scope) {
+  
   $scope.state = {};
 }

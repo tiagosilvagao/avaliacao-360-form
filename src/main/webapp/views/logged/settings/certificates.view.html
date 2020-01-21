@@ -1,0 +1,93 @@
+<div class="card bg-white rounded border-0 shadow-sm">
+    <div class="card--header align-items-lg-center border-bottom p-3 d-flex flex-column flex-lg-row justify-content-between">
+        <div class="d-flex align-items-center mb-3 mb-lg-0">
+            <h5 class="card-title mb-0 mr-2">Certificações</h5>
+            <button class="btn btn-success btn-sm d-inline-flex justify-content-center ml-3" data-toggle="modal" data-target="#exampleModal">Adicionar <i class="material-icons ml-2">add</i></button>
+        </div>
+    </div>
+    
+    <div class="card-body">
+        <div class="certificates d-flex align-items-center mb-5">
+            <span class="bg-light rounded-circle icon-circle--medium d-flex justify-content-center align-items-center">
+                <i class="material-icons icon-size--medium">class</i>
+            </span>
+            <div class="col">
+                <p class="mb-2 h5 font-weight-normal">Oracle Certified Professional Advanced PL/SQL</p>
+                <p class="h6 text-muted mb-0">Amazon - 2019</p>
+            </div>
+        </div>
+        
+        <div class="certificates d-flex align-items-center mb-5">
+            <span class="bg-light rounded-circle icon-circle--medium d-flex justify-content-center align-items-center">
+                <i class="material-icons icon-size--medium">class</i>
+            </span>
+            <div class="col">
+                <p class="mb-2 h5 font-weight-normal">Certificação ITIL</p>
+                <p class="h6 text-muted mb-0">Microsoft - 2018</p>
+            </div>
+        </div>
+        
+        <div class="certificates d-flex align-items-center mb-5">
+            <span class="bg-light rounded-circle icon-circle--medium d-flex justify-content-center align-items-center">
+                <i class="material-icons icon-size--medium">class</i>
+            </span>
+            <div class="col">
+                <p class="mb-2 h5 font-weight-normal">Certificação CISSP</p>
+                <p class="h6 text-muted mb-0">IBM - 2017</p>
+            </div>
+        </div>
+        
+        <div class="certificates d-flex align-items-center mb-5">
+            <span class="bg-light rounded-circle icon-circle--medium d-flex justify-content-center align-items-center">
+                <i class="material-icons icon-size--medium">class</i>
+            </span>
+            <div class="col">
+                <p class="mb-2 h5 font-weight-normal">Certified in the Governance of Enterprise IT (CGEIT)</p>
+                <p class="h6 text-muted mb-0">Google - 2017</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content border-0">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicionar um certificado</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail4"><small class="text-muted">Título</small></label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail4"><small class="text-muted">Instituição</small></label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword4"><small class="text-muted">Finalizado em</small></label>
+                <input type="number" class="form-control" id="inputCity" min="0" placeholder="Ano">
+              </div>
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Salvar</button>
+        </div>
+      </div>
+    </div>
+</div>

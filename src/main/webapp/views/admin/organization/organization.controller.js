@@ -1,16 +1,9 @@
 app.controller('OrganizationController', [
   '$scope',
-  '$http',
-  '$rootScope',
-  '$state',
-  '$translate',
-  '$filter',
-  '$sessionStorage',
-  '$timeout',
   OrganizationController,
 ]);
 
-function OrganizationController ($scope, $http, $rootScope, $state, $translate, $filter, $sessionStorage, $timeout) {
+function OrganizationController ($scope) {
   var ctrl = this;
 
   $scope.state = {};
